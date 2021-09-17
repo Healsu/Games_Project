@@ -10,7 +10,7 @@ public class Stranded_Island {
 
         //Et for loop til at vise hver mulighed for spilleren.
         for (int i = 0; i < options.length; i++) {
-            //give hele indexet et nyt navn som kun bliver brugt her
+            //Giver hele indexet et nyt navn som kun bliver brugt her
             String elementInArray = options[i];
             System.out.println((i + 1) + ". " + elementInArray);
         }
@@ -21,13 +21,15 @@ public class Stranded_Island {
     }
 
     public static void result (String options[], int allInputsCombined[]){
+
+        //Vi laver et forloop for de 10 gange spilleren skal vælge en genstand de gerne vil have
         for (int i = 0; i < allInputsCombined.length; i++) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("What item number would you like? ");
             int playerChoice = scanner.nextInt()-1;
             allInputsCombined[playerChoice]+=1;
-
            }
+        //Vi printer listen ud af hvor mange gange hver genstand var blevet valgt
         for (int j = 0; j < allInputsCombined.length; j++){
             System.out.println(allInputsCombined[j]);
         }

@@ -47,6 +47,7 @@ public class rockPaperScissor {
                 botMove = "scissor";
 
             }
+            System.out.println("Player 1 have chosen "+player1Move+" as theird move");
             System.out.println("The bot have chosen "+botMove+" as their move");
 
         }
