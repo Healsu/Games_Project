@@ -59,22 +59,24 @@ public class rockPaperScissor {
 
             if (player1Move.equals(botMove)) {
                 System.out.println("Its a draw");
-            } else if (player1Move.equals("rock") || botMove.equals("scissor")) {
+                playerWin = false;
+                botWin = false;
+            } else if (player1Move.equals("rock") && botMove.equals("scissor")) {
                 playerWin = true;
                 botWin = false;
-            } else if (player1Move.equals("paper") || botMove.equals("rock")) {
+            } else if (player1Move.equals("paper") && botMove.equals("rock")) {
                 playerWin = true;
                 botWin = false;
-            } else if (player1Move.equals("scissor") || botMove.equals("paper")) {
+            } else if (player1Move.equals("scissor") && botMove.equals("paper")) {
                 playerWin = true;
                 botWin = false;
-            } else if (player1Move.equals("rocks") || botMove.equals("paper")) {
+            } else if (player1Move.equals("rocks") && botMove.equals("paper")) {
                 botWin = true;
                 playerWin = false;
-            } else if (player1Move.equals("paper") || botMove.equals("scissor")) {
+            } else if (player1Move.equals("paper") && botMove.equals("scissor")) {
                 botWin = true;
                 playerWin = false;
-            } else if (player1Move.equals("scissor") || botMove.equals("rock")) {
+            } else if (player1Move.equals("scissor") && botMove.equals("rock")) {
                 botWin = true;
                 playerWin = false;
             }
@@ -84,6 +86,7 @@ public class rockPaperScissor {
             } else if (botWin == true) {
                 System.out.println("The bot wins");
             }
+
 
         }
     }
@@ -116,29 +119,33 @@ public class rockPaperScissor {
 
             if (player1Move.equals(player2Move)) {
                 System.out.println("Its a draw");
-            } else if (player1Move.equals("rock") || player2Move.equals("scissor")) {
+                player1Win = false;
+                player2Win = false;
+            } else if (player1Move.equals("rock") && player2Move.equals("scissor")) {
                 player1Win = true;
                 player2Win = false;
-            } else if (player1Move.equals("paper") || player2Move.equals("rock")) {
+            } else if (player1Move.equals("paper") && player2Move.equals("rock")) {
                 player1Win = true;
                 player2Win = false;
-            } else if (player1Move.equals("scissor") || player2Move.equals("paper")) {
+            } else if (player1Move.equals("scissor") && player2Move.equals("paper")) {
                 player1Win = true;
                 player2Win = false;
-            } else if (player1Move.equals("rocks") || player2Move.equals("paper")) {
+            } else if (player1Move.equals("rock") && player2Move.equals("paper")) {
                 player2Win = true;
                 player1Win = false;
-            } else if (player1Move.equals("paper") || player2Move.equals("scissor")) {
+            } else if (player1Move.equals("paper") && player2Move.equals("scissor")) {
                 player2Win = true;
                 player1Win = false;
-            } else if (player1Move.equals("scissor") || player2Move.equals("rock")) {
+            } else if (player1Move.equals("scissor") && player2Move.equals("rock")) {
                 player2Win = true;
                 player1Win = false;
             }
-            if (player1Win == true) {
+
+
+            if (player1Win = true) {
                 System.out.println(player1Name + " wins round " + endingRound);
                 System.out.println(player2Name + " loses round " + endingRound);
-            } else if (player2Win == true) {
+            } else if (player2Win = true) {
                 System.out.println(player2Name + " wins round " + endingRound);
                 System.out.println(player1Name + " loses round " + endingRound);
             } else {
