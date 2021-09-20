@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class rockPaperScissor {
+
+    //Starting variabels and commands to the actual game
     public static void main(String[] args) {
 
-        int rounds = 3;
+        int rounds = 4;
         boolean vsBot = false;
         boolean vsPlayer = false;
 
@@ -44,7 +46,7 @@ public class rockPaperScissor {
 
 
             System.out.println("We will now use our toaster IQ ai pick a random move: ");
-            int rand = (int) Math.random() * 3;
+            int rand = (int) (Math.random() * 3);
             String botMove = "";
             if (rand == 0) {
                 botMove = "rock";
@@ -104,6 +106,11 @@ public class rockPaperScissor {
             System.out.println(player1Name + " choose a move between rock, paper or scissor: ");
             String player1Move = scanner1.nextLine();
 
+            System.out.println("//////////////////////////////////////////////");
+            System.out.println("//////////////////////////////////////////////");
+            System.out.println("//////////////////////////////////////////////");
+            System.out.println("//////////////////////////////////////////////");
+
             System.out.println("Now look away gay ass " + player1Name + " and let " + player2Name + " pick now: ");
             String player2Move = scanner1.nextLine();
 
@@ -130,10 +137,15 @@ public class rockPaperScissor {
             }
             if (player1Win == true) {
                 System.out.println(player1Name + " wins round " + endingRound);
+                System.out.println(player2Name + " loses round " + endingRound);
             } else if (player2Win == true) {
+                System.out.println(player2Name + " wins round " + endingRound);
+                System.out.println(player1Name + " loses round " + endingRound);
+            } else {
+                System.out.println("ERROR NO WINNERS");
             }
-            System.out.println(player2Name + " wins round " + endingRound);
+            endingRound += 1;
         }
-        endingRound += 1;
+
     }
 }
